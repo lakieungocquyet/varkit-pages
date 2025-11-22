@@ -1,6 +1,7 @@
 import {useState} from "react";
-
+import { Link, useNavigate } from 'react-router';
 function HeaderNavigation () {
+    const navigate = useNavigate();
     const [openSection, setOpenSection] = useState(null);
     let closeTimer = null;
 
@@ -17,7 +18,7 @@ function HeaderNavigation () {
     return(
         <div className={`header_navigation`} >
             <div className={`dropdown_container`}>
-                <button className="dropdown_button">
+                <button className="dropdown_button" onClick={() => navigate("/home")}>
                     <span className="dropdown_button_label">
                         Home
                     </span>

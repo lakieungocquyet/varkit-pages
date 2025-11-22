@@ -2,7 +2,7 @@ import Header from "../components/Header.jsx";
 import Body from "../components/Body.jsx";
 import Footer from "../components/Footer.jsx";
 
-function Home () {
+function Main () {
     return (
         <>
             <Header></Header>
@@ -11,7 +11,7 @@ function Home () {
         </>
     )
 }
-export default Home;
+export default Main;
 
 
 
