@@ -2,8 +2,17 @@ import {useState} from "react";
 
 function HeaderNavigation () {
     const [openSection, setOpenSection] = useState(null);
-    const toggleSection = (name) => {
-        setOpenSection(prev => prev === name ? null : name);
+    let closeTimer = null;
+
+    const open = (name) => {
+        clearTimeout(closeTimer);
+        setOpenSection(name);
+    };
+
+    const close = () => {
+        closeTimer = setTimeout(() => {
+            setOpenSection(null);
+        }, 150);
     };
     return(
         <div className={`header_navigation`} >
@@ -15,7 +24,7 @@ function HeaderNavigation () {
                 </button>
             </div>
             <div className={`dropdown_container ${openSection === "installation" ? "open" : ""}`}>
-                <button className="dropdown_button" onClick={() => toggleSection("installation")}>
+                <button className="dropdown_button" onMouseEnter={() => open("installation")} onMouseLeave={close}>
                     <span className="dropdown_button_label">
                         Installation
                     </span>
@@ -29,28 +38,31 @@ function HeaderNavigation () {
                 </button>
             </div>
             <div className={`dropdown_container ${openSection === "about" ? "open" : ""}`}>
-                <button className="dropdown_button" onClick={ () => toggleSection("about")}>
+                <button className="dropdown_button" onMouseEnter={() => open("about")} onMouseLeave={close}>
                     <span className="dropdown_button_label" >
                         About
                     </span>
                 </button>
             </div>
-            {(openSection === "installation" || openSection === "about")  && (
-                <div className="dropdown_panel">
-                    { openSection === "about" && (
-                        <div className="about_panel">
-                            <button>
-                                About us
-                            </button>
-                            <button>
-                                License
-                            </button>
-                        </div>
-                        )
-
-                    }
+            {(openSection === "installation")  && (
+                <div className="dropdown_panel" onMouseEnter={() => open("installation")} onMouseLeave={close}>
+                    
                 </div>
                 )
+            }
+            {(openSection === "about") && (
+                <div className="dropdown_panel" onMouseEnter={() => open("about")} onMouseLeave={close}>
+                    <div className="about_panel">
+                        <button>
+                            About us
+                        </button>
+                        <button>
+                            License
+                        </button>
+                    </div>
+                </div>
+                )
+
             }
         </div>
     )
