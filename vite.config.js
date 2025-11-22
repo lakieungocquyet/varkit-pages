@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  base: '/varkit/',
+  base: '/varkit-pages/',
 })
