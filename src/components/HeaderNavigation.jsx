@@ -32,7 +32,7 @@ function HeaderNavigation () {
                 </button>
             </div>
             <div className={`dropdown_container`}>
-                <button className="dropdown_button">
+                <button className="dropdown_button" onClick={() => navigate("/docs")}>
                     <span className="dropdown_button_label">
                         Documentation
                     </span>
