@@ -6,7 +6,7 @@ function Body() {
     return (
         <div className="body">
             <Routes>
-                <Route path="/" element={<Navigate to="/home" replace />} />
+                {/* <Route path="/" element={<Navigate to="/home" replace />} /> */}
                 <Route path="/home" element={<Home/>}/>
             </Routes>
         </div>
