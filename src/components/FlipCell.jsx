@@ -1,24 +1,47 @@
 import { useState, useEffect } from "react";
+function FlipCell({ 
+	tick,
+	front, 
+	back, 
+	interval = 5000, 
+	delay = 0,
+	rotate = true,
+    frontColor = "#ffffff",
+    backColor = "#FF7F50", 
+}) {
+  	const [flipped, setFlipped] = useState(false);
 
-function FlipCell({ frontText, backText, interval=5000 }) {
-  const [flipped, setFlipped] = useState(false);
+    useEffect(() => {
+        if (!rotate) return;
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setFlipped(prev => !prev);
-    }, interval);
+        const time = tick * 100; // tick = 100ms
+        if (time < delay) return;
 
-    return () => clearInterval(timer);
-  }, [interval]);
+        const elapsed = time - delay;
+
+        if (elapsed % interval === 0) {
+            setFlipped(f => !f);
+        }
+
+    }, [tick]);
 
   return (
-    <div className="cell">
+    <div className="cell" style={{ animationDelay: `${delay}ms` }}>
       <div className={`cell_inner ${flipped ? "show-back" : ""}`}>
-        <div className="front">{frontText}</div>
-        <div className="back">{backText}</div>
+        <div 
+			className="front" 
+			style={{ backgroundColor: frontColor}}
+		>
+			{front}
+		</div>
+        <div 
+			className="back"
+			style={{ backgroundColor: backColor}}
+		>
+			{back}
+		</div>
       </div>
     </div>
   );
 }
-
 export default FlipCell;

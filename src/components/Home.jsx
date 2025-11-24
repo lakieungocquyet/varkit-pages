@@ -1,9 +1,19 @@
+import { useState, useEffect } from "react";
+import FlipCell from './FlipCell';
+
+
 function Home() {
+    const [tick, setTick] = useState(0);
+
+    useEffect(() => {
+    const timer = setInterval(() => setTick(t => t + 1), 100);
+    return () => clearInterval(timer);
+    }, []);
     return (
         <div className="home">
             <div className="home_title">
                 <span>
-                    Varkit: Solution for whole exome sequencing (WES) data
+                    Varkit: Solution for whole exome sequencing data
                 </span>
                 <div className="home_title_actions">
                     <button className="explore_button">
@@ -15,61 +25,65 @@ function Home() {
                 </div>
             </div>
             <div className="home_design">
-                <div class="grid">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell flip">
-                        <div className="cell_inner">
-                            <div className="front"></div>
-                            <div className="back"></div>
-                        </div>
-                    </div>
+                <div className="grid">
+                    {/* Column I */}
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
 
 
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
+                    {/* Column II */}
+                    <FlipCell tick={tick} delay={200} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={400} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={600} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
 
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
 
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                                        <div class="cell flip">
-                        <div className="cell_inner">
-                            <div className="front"></div>
-                            <div className="back"></div>
-                        </div>
-                    </div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell flip">
-                        <div className="cell_inner">
-                            <div className="front">a</div>
-                            <div className="back">b</div>
-                        </div>
-                    </div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
+                    {/* Column III */}
+                    <FlipCell tick={tick} delay={800} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={1000} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={1200} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={1400} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+
+
+                    {/* Column IV */}
+                    <FlipCell tick={tick} delay={1600} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={1800} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2000} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={2200} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+
+
+                    {/* Column V */}
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2400} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2600} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2800} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+
+
+                    {/* Column VI */}
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
                 </div>
             </div>
 

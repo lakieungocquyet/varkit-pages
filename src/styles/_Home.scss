@@ -41,82 +41,57 @@
             }
         }
     }
-    .home_design {
+.home_design {
         grid-area: right;
         display: flex;
         justify-content: center;
         align-items: center;
-.grid {
-  display: grid;
-  grid-template-columns: repeat(7, 100px);
-  grid-template-rows: repeat(4, 100px);
-  gap: 5px;
-  perspective: 1000px;
-}
-
-/* ô cha – cố định kích thước */
-.cell {
-            width: 100px;
-            height: 100px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(7, 85px);
+            grid-template-rows: repeat(6, 85px);
+            gap: 5px;
+            perspective: 1000px;
+        }
+         .cell {
+            width: 85px;
+            height: 85px;
             position: relative;
-            border: 1px solid #cfcfcf;
             overflow: hidden;
+            // border: 1px solid #cfcfcf;
             box-sizing: border-box;
-}
+			perspective: 300px;
+			perspective-origin: center;
+        }
 
-/* phần xoay */
-.cell_inner {
+        .cell_inner {
             width: 100%;
             height: 100%;
+            position: relative;
             transform-style: preserve-3d;
-}
+            transition: transform 8s cubic-bezier(.17,.67,.12,.99);
+        }
+        .cell_inner.show-back {
+            transform: rotateY(180deg);
+        }
 
-/* nếu ô này flip */
-.cell.flip .cell_inner {
-  animation: flipCard 6s infinite ease-in-out;
-}
-
-/* hai mặt */
-.front, .back {
+        .front,
+        .back {
             position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
-            backface-visibility: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 22px;
             font-weight: 600;
-}
-        .front {
-            background: #e3e3e3;
+            backface-visibility: hidden;
         }
 
         .back {
-            background: #bdbdbd;
             transform: rotateY(180deg);
         }
-.front {
-  background: #e3e3e3;
-}
-
-.back {
-  background: #bdbdbd;
-  transform: rotateY(180deg);
-}
-
-@keyframes flipCard {
-  0%   { transform: rotateY(0deg); }
-  20%  { transform: rotateY(180deg); } /* quay nhanh */
-  100% { transform: rotateY(180deg); } /* đứng yên chờ */
-}
-
-.cell:not(.flip) {
-  animation: none;
-}
-.cell.flip:nth-child(3)  { animation-delay: .3s; }
-.cell.flip:nth-child(8)  { animation-delay: .6s; }
-.cell.flip:nth-child(12) { animation-delay: 1s; }
-.cell.flip:nth-child(17) { animation-delay: 1.4s; }
     }
 }
+
