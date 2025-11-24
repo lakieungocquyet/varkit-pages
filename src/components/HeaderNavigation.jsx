@@ -68,12 +68,18 @@ function HeaderNavigation () {
             {(openSection === "about") && (
                 <div className="dropdown_panel" onMouseEnter={() => open("about")} onMouseLeave={close}>
                     <div className="about_panel">
-                        <button>
-                            About us
-                        </button>
-                        <button>
-                            License
-                        </button>
+                        <div className="about_panel_actions"> 
+                            <button>
+                                About us
+                                <span>Learn more about who we are</span>
+                            </button>
+                            <button>
+                                License
+                                <span>View software license terms</span>
+                            </button>
+                        </div>
+                        <div className="divider"></div>
+                        <div className="blog">blog</div>
                     </div>
                 </div>
                 )
