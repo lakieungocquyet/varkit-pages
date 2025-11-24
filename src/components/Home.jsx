@@ -13,7 +13,7 @@ function Home() {
         <div className="home">
             <div className="home_title">
                 <span>
-                    Varkit: Solution for whole exome sequencing data
+                    Solution for whole exome sequencing data
                 </span>
                 <div className="home_title_actions">
                     <button className="explore_button">
@@ -26,34 +26,58 @@ function Home() {
             </div>
             <div className="home_design">
                 <div className="grid">
-                    {/* Column I */}
+                    
                     <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={100} interval={12000} />
                     <FlipCell tick={tick} delay={200} interval={12000} />
+                    <FlipCell tick={tick} delay={300} interval={12000} />
                     <FlipCell tick={tick} delay={400} interval={12000} />
+                    <FlipCell tick={tick} delay={500} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} delay={600} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={700} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} delay={800} interval={12000} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
+                    
                     <FlipCell tick={tick} rotate={false} />
-                    {/* Column II */}
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={900} interval={12000} />
                     <FlipCell tick={tick} delay={1000} interval={12000} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    {/* Column III */}
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={1100} interval={12000} />
                     <FlipCell tick={tick} delay={1200} interval={12000} />
+                    <FlipCell tick={tick} delay={1300} interval={12000} />
                     <FlipCell tick={tick} rotate={false} />
-                    {/* Column IV */}
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
@@ -62,60 +86,187 @@ function Home() {
                     <FlipCell tick={tick} delay={1400} interval={12000} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
-                    {/* Column V */}
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={1500} interval={12000} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} delay={1600} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={1700} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} delay={1800} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={1900} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} delay={2000} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2100} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} delay={2200} interval={12000} />
                     <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2300} interval={12000} />
                     <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    {/* Column VI */}
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
+                    
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2400} interval={12000} />
+                    <FlipCell tick={tick} delay={2500} interval={12000} />
+                    <FlipCell tick={tick} delay={2600} interval={12000} />
                     <FlipCell tick={tick} rotate={false} />
-                    {/* Column VII */}
                     <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} delay={2400} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} delay={2600} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} delay={2800} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} delay={3000} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} delay={3200} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} delay={3400} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} rotate={false} />
-                    {/* Column VIII */}
+                    
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2700} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={2800} interval={12000} />
+                    <FlipCell tick={tick} delay={2900} interval={12000} />
+                    <FlipCell tick={tick} delay={3000} interval={12000} />
+                    <FlipCell tick={tick} delay={3100} interval={12000} />
+                    <FlipCell tick={tick} delay={3200} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={3300} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={3400} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={3500} interval={12000} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+        
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} delay={3600} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    {/* Column IX */}
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={3700} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
                     <FlipCell tick={tick} delay={3800} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={3900} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
                     <FlipCell tick={tick} delay={4000} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
-                    {/* Column X */}
-                    <FlipCell tick={tick} rotate={false} />
-                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={4100} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
                     <FlipCell tick={tick} delay={4200} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={4300} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} rotate={false} />
                     <FlipCell tick={tick} delay={4400} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
                     <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={4500} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={4600} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={4700} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={4800} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={4900} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={5000} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={5100} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={5200} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={5300} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={5400} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={5500} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={5600} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={5700} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={5800} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={5900} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} delay={6000} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={6100} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={6200} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} rotate={false} />
+                    <FlipCell tick={tick} delay={6300} interval={12000} frontColor = "#ffffff" backColor = "#565656" />
+                    <FlipCell tick={tick} rotate={false} />
+                    
                 </div>
             </div>
 
