@@ -16,7 +16,7 @@
         box-sizing: border-box;
         border-bottom: 3px solid transparent;
         &.open {
-            border-bottom: 3px solid #00577f;
+            border-bottom: 3px solid #FF7F50;
         }
     }
   
@@ -71,7 +71,7 @@
                     justify-content: center;
                     padding: 20px 0px;
                     color: #565656;
-                    font-size: 20px;
+                    font-size: 15px;
                     font-weight: 600;
                     display: flex;
                     align-items: center;
@@ -91,7 +91,7 @@
                     justify-content: center;
                     padding: 20px 0px;
                     color: #565656;
-                    font-size: 20px;
+                    font-size: 15px;
                     font-weight: 600;
                     display: flex;
                     align-items: center;
@@ -106,23 +106,37 @@
             grid-template-columns: 1fr 0.5px 1fr;
             grid-template-areas: "left middle right";
 			.about_panel_actions{
+                padding-top: 20px;
 				grid-area: left;
 				display: flex;
 				flex-direction: column;
 				justify-content: start;
-				align-items: start;
+				align-items: center;
 				gap: 5px;
 				button{
-					width: 350px;
-					height: 80px;
+                    gap: 5px;
+                    padding: 10px 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+					width: 90%;
 					border: none;
 					background-color: #ffffff;
 					cursor: pointer;
-					font-size: 16px;
-					font-weight: 500;
 					&:hover {
 						background-color: #e0e0e0;
 					}
+                    .title{
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    .info{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #555555;
+                        margin-top: 5px;
+                    }
 				}
 			}
 			.divider{
