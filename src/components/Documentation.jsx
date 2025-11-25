@@ -2,7 +2,10 @@
 function Documentation () {
     return (
         <div className="documentation">
-            123
+            <div className="sidebar">
+                <span className="sidebar_section_title">Introduction</span>
+                <button className="sidebar_button">About us</button>
+            </div>
         </div>
     )
 }
