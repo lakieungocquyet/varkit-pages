@@ -69,7 +69,7 @@ function HeaderNavigation () {
                 <div className="dropdown_panel" onMouseEnter={() => open("about")} onMouseLeave={close}>
                     <div className="about_panel">
                         <div className="about_panel_actions"> 
-                            <button>
+                            <button onClick={() => navigate("/docs/about_us")}>
                                 <span className="title">About us</span>
                                 <div className="info">Learn more about who we are</div>
                             </button>
