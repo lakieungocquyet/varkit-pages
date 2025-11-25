@@ -18,7 +18,7 @@ function Documentation () {
                 <div className="divider"></div>
 
                 <span className="sidebar_section_title">License</span>
-                <button className="sidebar_button">GPL-3.0 license</button>
+                <button className="sidebar_button" onClick={() => navigate("/docs/license")}>GPL-3.0 license</button>
                 <button className="sidebar_button">Third-party Packages</button>
 
                 <div className="divider"></div>

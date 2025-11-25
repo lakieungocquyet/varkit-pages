@@ -73,7 +73,7 @@ function HeaderNavigation () {
                                 <span className="title">About us</span>
                                 <div className="info">Learn more about who we are</div>
                             </button>
-                            <button>
+                            <button onClick={() => navigate("/docs/license")}>
                                 <span className="title">License</span>
                                 <div className="info">View software license terms</div>
                             </button>

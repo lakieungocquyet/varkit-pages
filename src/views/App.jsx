@@ -4,6 +4,7 @@ import Main from '../pages/Main.jsx'
 import Home from '../components/Home.jsx'
 import Documentation from '../components/Documentation.jsx'
 import AboutUs from '../components/AboutUs.jsx'
+import License from '../components/License.jsx'
 import '../styles/App.scss'
 import '../styles/Login_page.scss'
 import '../styles/Signup_page.scss'
@@ -18,6 +19,7 @@ function App() {
 				<Route path="docs" element={<Documentation />}>
 					<Route index element={<AboutUs />} />
 					<Route path="about_us" element={<AboutUs />}/>
+					<Route path="license" element={<License />}/>
 				</Route>
 			</Route>
         </Routes>
