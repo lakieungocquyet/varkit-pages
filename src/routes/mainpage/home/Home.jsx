@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import FlipCell from './FlipCell';
-
+import FlipCell from '../../../components/ui/FlipCell';
 
 function Home() {
     const [tick, setTick] = useState(0);

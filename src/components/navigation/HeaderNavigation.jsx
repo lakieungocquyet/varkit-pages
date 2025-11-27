@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router';
 function HeaderNavigation () {
     const navigate = useNavigate();
     const [openSection, setOpenSection] = useState(null);
+    const [selectedSection, setSelectedSection] = useState(null);
     let closeTimer = null;
 
     const open = (name) => {
@@ -18,28 +19,60 @@ function HeaderNavigation () {
     return(
         <div className={`header_navigation`} >
             <div className={`dropdown_container`}>
-                <button className="dropdown_button" onClick={() => navigate("/home")}>
+                <button 
+                    className={`dropdown_button ${selectedSection === "home" ? "selected" : "" } ${openSection === "home" ? "open" : ""}`}
+                    onClick={() => {
+                        setSelectedSection("home");
+                        navigate("/home")
+                    }} 
+                    onMouseEnter={() => open("home")} 
+                    onMouseLeave={close}
+                >
                     <span className="dropdown_button_label">
                         Home
                     </span>
                 </button>
             </div>
-            <div className={`dropdown_container ${openSection === "installation" ? "open" : ""}`}>
-                <button className="dropdown_button" onMouseEnter={() => open("installation")} onMouseLeave={close}>
+            <div className={`dropdown_container`}>
+                <button 
+                    className={`dropdown_button ${selectedSection === "installation" ? "selected" : "" } ${openSection === "installation" ? "open" : ""}`}
+                    onClick={() => {
+                        setSelectedSection("installation");
+                        navigate("/installation")
+                    }} 
+                    onMouseEnter={() => open("installation")} 
+                    onMouseLeave={close}
+                >
                     <span className="dropdown_button_label">
                         Installation
                     </span>
                 </button>
             </div>
             <div className={`dropdown_container`}>
-                <button className="dropdown_button" onClick={() => navigate("/docs")}>
+                <button 
+                    className={`dropdown_button ${selectedSection === "documentation" ? "selected" : "" } ${openSection === "documentation" ? "open" : ""}`}
+                    onClick={() => {
+                        setSelectedSection("documentation");
+                        navigate("/docs")
+                    }} 
+                    onMouseEnter={() => open("documentation")} 
+                    onMouseLeave={close}
+                >
                     <span className="dropdown_button_label">
                         Documentation
                     </span>
                 </button>
             </div>
-            <div className={`dropdown_container ${openSection === "about" ? "open" : ""}`}>
-                <button className="dropdown_button" onMouseEnter={() => open("about")} onMouseLeave={close}>
+            <div className={`dropdown_container`}>
+                <button 
+                    className={`dropdown_button ${selectedSection === "about" ? "selected" : "" } ${openSection === "about" ? "open" : ""}`}
+                    onClick={() => {
+                        setSelectedSection("about");
+                        navigate("/docs")
+                    }} 
+                    onMouseEnter={() => open("about")} 
+                    onMouseLeave={close}
+                >
                     <span className="dropdown_button_label" >
                         About
                     </span>
