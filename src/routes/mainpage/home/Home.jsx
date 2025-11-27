@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { Link, useNavigate } from 'react-router';
 import FlipCell from '../../../components/ui/FlipCell';
 
 function Home() {
+    const navigate = useNavigate();
     const [tick, setTick] = useState(0);
 
     useEffect(() => {
@@ -15,10 +17,20 @@ function Home() {
                     Solution for whole exome sequencing data
                 </span>
                 <div className="home_title_actions">
-                    <button className="explore_button">
+                    <button 
+                        className="explore_button"
+                        onClick={() => {
+                            navigate("/docs")
+                        }}
+                    >
                         Explore Now
                     </button>
-                    <button className="install_button">
+                    <button 
+                        className="install_button"
+                        onClick={() => {
+                            navigate("/installation")
+                        }}
+                    >
                         Install
                     </button>
                 </div>
