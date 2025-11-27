@@ -449,7 +449,7 @@ html, body {
             display: flex;
             align-items: center;
             justify-content: start;
-            gap: 15px;
+            gap: 10px;
             margin-bottom: 20px;
             width: 100%;
             .selector_group {
@@ -481,9 +481,9 @@ html, body {
             border-radius: 4px;
             .installation_info_banner_icon {
                 background-color: #FF7F50;
-                padding: 1px 6px;
+                padding: 1px 5px;
                 border-radius: 2px;
-                font-size: 12px;
+                font-size: 10px;
                 color: #ffffff;
             }
             .installation_info_banner_info {
@@ -494,7 +494,7 @@ html, body {
         
         .installation_code_block {
             background-color: #1e1e1e;
-            border-radius: 8px;
+            border-radius: 5px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             

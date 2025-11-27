@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import Dropdown from "../../../components/ui/Dropdown.jsx";
 import { generateInstallationCommands } from "../../../utils/InstallationCommands";
+import DockerIcon from '../../../components/icon/DockerIcon.jsx'
+import LinuxIcon from '../../../components/icon/LinuxIcon.jsx'
+import WindowsIcon from "../../../components/icon/WindowsIcon.jsx";
+import PythonIcon from "../../../components/icon/PythonIcon.jsx";
+import GitIcon from '../../../components/icon/GitIcon.jsx'
 
 function Installation() {
     const [version, setVersion] = useState("latest");
@@ -18,16 +23,14 @@ function Installation() {
     ];
     
     const operatingSystems = [
-        { value: "linux", label: "Linux", icon: "🐧" },
-        { value: "Windows", label: "Windows", icon: "🪟" },
-        { value: "macos", label: "macOS", icon: "🍎" }
+        { value: "linux", label: "Linux", icon: <LinuxIcon/> },
+        { value: "Windows", label: "Windows", icon: <WindowsIcon/> },
     ];
     
     const installationMethods = [
-        { value: "docker", label: "Docker", icon: "🐳" },
-        { value: "pip", label: "pip", icon: "📦" },
-        { value: "conda", label: "Conda", icon: "🐍" },
-        { value: "source", label: "Source", icon: "📂" }
+        { value: "docker", label: "Docker", icon: <DockerIcon/> },
+        { value: "pip", label: "pip", icon: <PythonIcon/> },
+        { value: "source", label: "Source", icon: <GitIcon/> }
     ];
 
     const packageManagers = [
@@ -96,7 +99,7 @@ function Installation() {
                     />
                 </div>
                 
-                {method === 'docker' && (
+                {/* {method === 'docker' && (
                     <>
                         <span className="selector_connector">with</span>
                         <div className="selector_group">
@@ -109,7 +112,7 @@ function Installation() {
                             />
                         </div>
                     </>
-                )}
+                )} */}
             </div>
             
             {/* Info Banner (optional) */}
