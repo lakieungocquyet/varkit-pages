@@ -133,6 +133,7 @@ html, body {
                 .resources{
                     display: flex;
                     flex-direction: column;
+                    gap: 10px;
                     .resources_title{
                         color: #666;
                         font-size: 13px;
@@ -151,6 +152,7 @@ html, body {
                 .about{
                     display: flex;
                     flex-direction: column;
+                    gap: 10px;
                     .about_title{
                         color: #666;
                         font-size: 13px;

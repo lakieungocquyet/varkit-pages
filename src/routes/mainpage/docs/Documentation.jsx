@@ -6,7 +6,7 @@ function Documentation () {
         <div className="documentation">
             <div className="sidebar">
                 <span className="sidebar_section_title">Introduction</span>
-                <button className="sidebar_button" onClick={() => navigate("/docs/about_us")}>About us</button>
+                <button className="sidebar_button" onClick={() => navigate("/docs/about-us")}>About us</button>
                 <button className="sidebar_button">What is Varkit?</button>
                 <button className="sidebar_button">Key Features</button>
                 <div className="divider"></div>

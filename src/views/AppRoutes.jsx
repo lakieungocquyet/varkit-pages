@@ -16,7 +16,7 @@ function AppRoutes() {
 				<Route path="home" element={<Home />}/>
 				<Route path="docs" element={<Documentation />}>
 					<Route index element={<AboutUs />} />
-					<Route path="about_us" element={<AboutUs />}/>
+					<Route path="about-us" element={<AboutUs />}/>
 					<Route path="license" element={<License />}/>
 				</Route>
 				<Route path="installation" element={<Installation />}/>

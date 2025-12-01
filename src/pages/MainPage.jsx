@@ -27,6 +27,8 @@ function Main () {
                         </div>
                         <div className="about">
                             <span className="about_title">ABOUT</span>
+                            <Link className="link" to="/docs/about-us">About us</Link>
+                            <Link className="link" to="/docs/license">License</Link>
                             
 
                         </div>

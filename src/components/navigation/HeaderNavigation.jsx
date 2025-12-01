@@ -1,20 +1,24 @@
-import {useState} from "react";
+import { useState, useRef } from "react";
 import { Link, useNavigate } from 'react-router';
 function HeaderNavigation () {
     const navigate = useNavigate();
     const [openSection, setOpenSection] = useState(null);
     const [selectedSection, setSelectedSection] = useState(null);
-    let closeTimer = null;
+    const closeTimer = useRef(null);
 
     const open = (name) => {
-        clearTimeout(closeTimer);
+        clearTimeout(closeTimer.current);
         setOpenSection(name);
     };
 
     const close = () => {
-        closeTimer = setTimeout(() => {
+        closeTimer.current = setTimeout(() => {
             setOpenSection(null);
         }, 150);
+    };
+    const closeImmediately = () => {
+        clearTimeout(closeTimer.current);
+        setOpenSection(null);
     };
     return(
         <div className={`header_navigation`} >
@@ -79,7 +83,11 @@ function HeaderNavigation () {
                 </button>
             </div>
             {(openSection === "installation")  && (
-                <div className="dropdown_panel" onMouseEnter={() => open("installation")} onMouseLeave={close}>
+                <div 
+                    className="dropdown_panel" 
+                    onMouseEnter={() => open("installation")} 
+                    onMouseLeave={close}
+                >
                     <div className="installation_panel">
                         <div className="window_installation_section">
                             <div className="window_installation_title">
@@ -99,14 +107,29 @@ function HeaderNavigation () {
                 )
             }
             {(openSection === "about") && (
-                <div className="dropdown_panel" onMouseEnter={() => open("about")} onMouseLeave={close}>
+                <div 
+                    className="dropdown_panel" 
+                    onMouseEnter={() => open("about")} 
+                    onMouseLeave={close}
+                >
                     <div className="about_panel">
                         <div className="about_panel_actions"> 
-                            <button onClick={() => navigate("/docs/about_us")}>
+                            <button 
+                                onClick={() => {
+                                    navigate("/docs/about-us");
+                                    closeImmediately();  
+                                }}
+                            >
                                 <span className="title">About us</span>
                                 <div className="info">Learn more about who we are</div>
                             </button>
-                            <button onClick={() => navigate("/docs/license")}>
+
+                            <button 
+                                onClick={() => {
+                                    navigate("/docs/license");
+                                    closeImmediately(); 
+                                }}
+                            >
                                 <span className="title">License</span>
                                 <div className="info">View software license terms</div>
                             </button>
