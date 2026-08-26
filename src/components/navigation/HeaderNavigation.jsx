@@ -39,6 +39,21 @@ function HeaderNavigation () {
             </div>
             <div className={`dropdown_container`}>
                 <button 
+                    className={`dropdown_button ${selectedSection === "tools" ? "selected" : "" } ${openSection === "tools" ? "open" : ""}`}
+                    onClick={() => {
+                        setSelectedSection("tools");
+                        navigate("/tools")
+                    }} 
+                    onMouseEnter={() => open("tools")} 
+                    onMouseLeave={close}
+                >
+                    <span className="dropdown_button_label">
+                        Tools
+                    </span>
+                </button>
+            </div>
+            <div className={`dropdown_container`}>
+                <button 
                     className={`dropdown_button ${selectedSection === "installation" ? "selected" : "" } ${openSection === "installation" ? "open" : ""}`}
                     onClick={() => {
                         setSelectedSection("installation");

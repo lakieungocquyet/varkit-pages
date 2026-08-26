@@ -1,6 +1,15 @@
 @use './mainpage/home/Home';
+@font-face {
+    font-family: "Roboto-google-fonts";
+    src: url("./fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Google-Sans-google-fonts";
+    src: url("./fonts/Google_Sans/GoogleSans-VariableFont_GRAD,opsz,wght.ttf") format("truetype");
+}
 html, body {
-    font-family: Segoe UI, SegoeUI, Arial, sans-serif;
+    font-family: "Google-Sans-google-fonts", "Roboto-google-fonts", Segoe UI, SegoeUI, Arial, sans-serif;
     margin: 0;
     padding: 0;
     height: initial;
