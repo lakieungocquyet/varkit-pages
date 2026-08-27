@@ -52,7 +52,7 @@ function HeaderNavigation () {
                     </span>
                 </button>
             </div>
-            <div className={`dropdown_container`}>
+            {/* <div className={`dropdown_container`}>
                 <button 
                     className={`dropdown_button ${selectedSection === "installation" ? "selected" : "" } ${openSection === "installation" ? "open" : ""}`}
                     onClick={() => {
@@ -66,7 +66,7 @@ function HeaderNavigation () {
                         Installation
                     </span>
                 </button>
-            </div>
+            </div> */}
             <div className={`dropdown_container`}>
                 <button 
                     className={`dropdown_button ${selectedSection === "documentation" ? "selected" : "" } ${openSection === "documentation" ? "open" : ""}`}

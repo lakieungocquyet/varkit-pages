@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 function FlipCell({ 
-	tick,
-	front, 
-	back, 
-	interval = 5000, 
-	delay = 0,
-	rotate = true,
+    tick,
+    front, 
+    back, 
+    interval = 5000, 
+    delay = 0,
+    rotate = true,
     frontColor = "#ffffff",
     backColor = "#FF7F50", 
 }) {

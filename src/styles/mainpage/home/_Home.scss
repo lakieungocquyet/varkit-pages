@@ -2,18 +2,21 @@
     // background-color: #666;
     height: 100vh;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
     grid-template-areas: "left right";
     box-sizing: border-box;
     .home_title {
+        box-sizing: border-box;
         grid-area: left;
         display: flex;
         justify-content: start;
-        align-items: center;
+        align-items: start;
         flex-direction: column;
         font-size: 65px;
         font-weight: 400;
-        padding: 120px 50px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        padding-left: 50px;
         .home_title_actions {
             width: 100%;
             height: 60px;
@@ -39,7 +42,7 @@
                 font-size: 20px;
                 border: none;
                 background-color: rgb(255, 255, 255);
-                width: 250px;
+                width: 200px;
                 height: 100%;
                 cursor: pointer;
                 border: 1px solid #cfcfcf;
@@ -50,30 +53,31 @@
             }
         }
     }
-.home_design {
+    .home_design {
         grid-area: right;
         display: flex;
         justify-content: start;
-        align-items: center;
-        flex-direction: column;
+        align-items: start;
+        flex-direction: row;
         padding: 120px 0px;
         .grid {
             display: grid;
-            grid-template-columns: repeat(24, 30px);
-            grid-template-rows: repeat(9, 30px);
+            grid-template-columns: repeat(27, 30px);
+            grid-template-rows: repeat(11, 30px);
             grid-auto-flow: column;
-            gap: 5px;
+            gap: 1px;
             perspective: 1000px;
+            background: #cfcfcf;
         }
         .cell {
             width: 30px;
             height: 30px;
             position: relative;
             overflow: hidden;
-            // border: 1px solid #cfcfcf;
             box-sizing: border-box;
 			perspective: 300px;
 			perspective-origin: center;
+            background-color: #ffffff; 
         }
 
         .cell_inner {
