@@ -6,7 +6,8 @@ function FlipCell({
     interval = 5000, 
     delay = 0,
     rotate = true,
-    frontColor = "#ffffff",
+    // frontColor = "#ffffff",
+    frontColor = "transparent",
     backColor = "#FF7F50", 
 }) {
   	const [flipped, setFlipped] = useState(false);

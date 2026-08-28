@@ -1,10 +1,25 @@
 .home {
-    // background-color: #666;
+    background-image: 
+        linear-gradient(#ffffff 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff 1px, transparent 1px),
+        linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            #FAF6F1 25%,
+            #FAF6F1 50%,
+        );
+    background-size:
+        100px 100px,
+        100px 100px,
+        100% 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 35% 65%;
-    grid-template-areas: "left right";
+    grid-template-columns: 30% 5% 65%;
+    grid-template-areas: "left middle right";
     box-sizing: border-box;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 50px;
     .home_title {
         box-sizing: border-box;
         grid-area: left;
@@ -14,9 +29,6 @@
         flex-direction: column;
         font-size: 65px;
         font-weight: 400;
-        padding-top: 120px;
-        padding-bottom: 120px;
-        padding-left: 50px;
         .home_title_actions {
             width: 100%;
             height: 60px;
@@ -59,7 +71,6 @@
         justify-content: start;
         align-items: start;
         flex-direction: row;
-        padding: 120px 0px;
         .grid {
             display: grid;
             grid-template-columns: repeat(27, 30px);
@@ -67,7 +78,6 @@
             grid-auto-flow: column;
             gap: 1px;
             perspective: 1000px;
-            background: #cfcfcf;
         }
         .cell {
             width: 30px;
@@ -77,7 +87,6 @@
             box-sizing: border-box;
 			perspective: 300px;
 			perspective-origin: center;
-            background-color: #ffffff; 
         }
 
         .cell_inner {
