@@ -9,12 +9,12 @@ import Documentation from '../routes/mainpage/docs/Documentation.jsx'
 import AboutUs from '../routes/mainpage/docs/AboutUs.jsx'
 import License from '../routes/mainpage/docs/License.jsx'
 import Installation from '../routes/mainpage/installation/Installation.jsx'
-import usePageTracking from '../hooks/usePageTracking.js'
+import Analytics from '../components/analytics/Analytics.jsx'
 function AppRoutes() {
-	usePageTracking();
   	return (
 		<div className="app_routes">
 			<ScrollToTop />
+			<Analytics/>
 			<Routes>
 				<Route path="/" element={<Main />}>
 					<Route index element={<Home />} />
