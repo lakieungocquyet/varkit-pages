@@ -9,31 +9,33 @@ import Documentation from '../routes/mainpage/docs/Documentation.jsx'
 import AboutUs from '../routes/mainpage/docs/AboutUs.jsx'
 import License from '../routes/mainpage/docs/License.jsx'
 import Installation from '../routes/mainpage/installation/Installation.jsx'
+import usePageTracking from '../hooks/usePageTracking.js'
 function AppRoutes() {
-  return (
-      <div className="app_routes">
-		<ScrollToTop />
-        <Routes>
-			<Route path="/" element={<Main />}>
-				<Route index element={<Home />} />
+	usePageTracking();
+  	return (
+		<div className="app_routes">
+			<ScrollToTop />
+			<Routes>
+				<Route path="/" element={<Main />}>
+					<Route index element={<Home />} />
 
-				<Route path="home" element={<Home />}/>
+					<Route path="home" element={<Home />}/>
 
-				<Route path="docs" element={<Documentation />}>
-					<Route index element={<AboutUs />} />
-					<Route path="about-us" element={<AboutUs />}/>
-					<Route path="license" element={<License />}/>
+					<Route path="docs" element={<Documentation />}>
+						<Route index element={<AboutUs />} />
+						<Route path="about-us" element={<AboutUs />}/>
+						<Route path="license" element={<License />}/>
+					</Route>
+
+					<Route path="installation" element={<Installation />}/>
+
+					<Route path="tools" element={<Tools />}/> 
+					
+					<Route path="tools/vcftoolkit" element={<VCFtoolkit />}/>
+					<Route path="tools/vcftoolkit/vcftoolkit-convert" element={<VCFtoolkit_convert />}/>
 				</Route>
-
-				<Route path="installation" element={<Installation />}/>
-
-				<Route path="tools" element={<Tools />}/> 
-				
-				<Route path="tools/vcftoolkit" element={<VCFtoolkit />}/>
-				<Route path="tools/vcftoolkit/vcftoolkit-convert" element={<VCFtoolkit_convert />}/>
-			</Route>
-        </Routes>
-      </div>
-  )
+			</Routes>
+		</div>
+  	)
 }
 export default AppRoutes
