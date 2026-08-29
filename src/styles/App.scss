@@ -181,17 +181,25 @@ html, body {
     height: 100vh;
     display: flex;
     gap: 20px;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
-    .tools_title{
-        padding-top: 50px;
-        font-size: 50px;
-        font-weight: 200;
+    .tools_title_and_description {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        flex-direction: column;
+        .tools_title{
+            padding-top: 50px;
+            font-size: 50px;
+            font-weight: 200;
+        }
+        .tools_description {
+            font-size: 20px;
+            color: #555555;
+        }
     }
-    .tools_description {
-        font-size: 20px;
-        color: #555555;
-    }
+    
     .tools_container {
         width: 100%;
         box-sizing: border-box;
@@ -213,7 +221,7 @@ html, body {
             display: flex;
             flex-direction: row;
             gap: 20px;
-            .vcftoolkit {
+            .vcftoolkit_button {
                 width: 300px;
                 height: 150px;
                 background-color: #ffffff;
@@ -224,13 +232,13 @@ html, body {
                 align-items: start;
                 padding: 30px 30px;
                 gap: 20px;
-                .vcftoolkit_title {
+                .vcftoolkit_button_title {
                     font-size: 20px;
                     font-weight: 600;
                     padding: 0;
                     margin: 0;
                 }
-                .vcftoolkit_description {
+                .vcftoolkit_button_description {
                     text-align: left;
                     font-size: 15px;
                     font-weight: 0;
@@ -252,7 +260,6 @@ html, body {
     align-items: start;
     flex-direction: column;
     gap: 20px;
-    padding: 20px 20px;
     .vcftoolkit_title {
         font-size: 40px;
         font-weight: 200;
@@ -288,7 +295,7 @@ html, body {
             display: flex;
             flex-direction: row;
             gap: 20px;
-            .vcftoolkit_convert {
+            .vcftoolkit_convert_button {
                 width: 300px;
                 height: 150px;
                 background-color: #ffffff;
@@ -299,13 +306,13 @@ html, body {
                 align-items: start;
                 padding: 30px 30px;
                 gap: 20px;
-                .vcftoolkit_convert_title {
+                .vcftoolkit_convert_button_title {
                     font-size: 20px;
                     font-weight: 600;
                     padding: 0;
                     margin: 0;
                 }
-                .vcftoolkit_convert_description {
+                .vcftoolkit_convert_button_description {
                     text-align: left;
                     font-size: 15px;
                     font-weight: 0;
@@ -318,7 +325,7 @@ html, body {
                     cursor: pointer;
                 }
             }
-            .vcftoolkit_annotate {
+            .vcftoolkit_annotate_button {
                 width: 300px;
                 height: 150px;
                 background-color: #ffffff;
@@ -329,13 +336,13 @@ html, body {
                 align-items: start;
                 padding: 30px 30px;
                 gap: 20px;
-                .vcftoolkit_annotate_title {
+                .vcftoolkit_annotate_button_title {
                     font-size: 20px;
                     font-weight: 600;
                     padding: 0;
                     margin: 0;
                 }
-                .vcftoolkit_annotate_description {
+                .vcftoolkit_annotate_button_description {
                     text-align: left;
                     font-size: 15px;
                     font-weight: 0;
@@ -350,6 +357,9 @@ html, body {
             }
         }
     }
+}
+.vcftoolkit_convert {
+    
 }
 // documentation
 .documentation{

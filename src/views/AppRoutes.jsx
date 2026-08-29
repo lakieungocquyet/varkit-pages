@@ -4,6 +4,7 @@ import Main from '../pages/MainPage.jsx'
 import Home from '../routes/mainpage/home/Home.jsx'
 import Tools from '../routes/mainpage/tools/Tools.jsx'
 import VCFtoolkit from '../routes/mainpage/tools/VCFtoolkit.jsx'
+import VCFtoolkit_convert from "../routes/mainpage/tools/VCFtoolkit_convert.jsx";
 import Documentation from '../routes/mainpage/docs/Documentation.jsx'
 import AboutUs from '../routes/mainpage/docs/AboutUs.jsx'
 import License from '../routes/mainpage/docs/License.jsx'
@@ -28,8 +29,8 @@ function AppRoutes() {
 
 				<Route path="tools" element={<Tools />}/> 
 				
-				<Route path="tools/vcftoolkit" element={<VCFtoolkit />}>
-				</Route>
+				<Route path="tools/vcftoolkit" element={<VCFtoolkit />}/>
+				<Route path="tools/vcftoolkit/vcftoolkit-convert" element={<VCFtoolkit_convert />}/>
 			</Route>
         </Routes>
       </div>
