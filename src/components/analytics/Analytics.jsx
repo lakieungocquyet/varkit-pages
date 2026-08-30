@@ -9,7 +9,8 @@ function Analytics() {
     useEffect(() => {
         if (typeof window.gtag == 'function') {
             window.gtag('config', GA_TRACKING_ID, {
-                page_path: location.pathname + location.search,
+                page_path: location.pathname + location.search + location.hash, 
+                page_title: document.title
             });
         }
     }, [location]);
