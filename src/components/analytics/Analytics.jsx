@@ -10,9 +10,12 @@ function Analytics() {
         console.log('route changed ->', location.pathname, location.hash);
         console.log('gtag exists?', typeof window.gtag);
         if (typeof window.gtag == 'function') {
-            window.gtag('config', GA_TRACKING_ID, {
-                page_path: location.pathname + location.search + location.hash, 
-                page_title: document.title
+            const fullUrl = window.location.origin + window.location.pathname + location.hash;
+            window.gtag('event', 'page_view', {
+                page_location: fullUrl,
+                page_path: location.pathname + location.search + location.hash,
+                page_title: document.title,
+                send_to: GA_TRACKING_ID
             });
         }
     }, [location]);
